@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import gsap from "gsap";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-const App = () => {
+const App: React.FC = () => {
   
   const dotRef = useRef<HTMLDivElement>(null);
 
