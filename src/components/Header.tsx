@@ -4,20 +4,37 @@ const Header: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
     useEffect(() => {
-
         const headerElm = document.getElementById("header") as HTMLElement
         const mainElm = document.getElementById("main") as HTMLElement
 
-        mainElm.addEventListener("wheel",(e: WheelEvent)=>{
-            if(e.deltaY >= 0){
+        let lastScrollTop = 0
+
+        const handleScroll = (e: Event) => {
+            const currentScrollTop = mainElm.scrollTop
+            
+            if (currentScrollTop > lastScrollTop) {
+                // Scrolling down
                 headerElm.style.transform = "translateY(-100%)"
+            } else {
+                // Scrolling up
+                headerElm.style.transform = "translateY(0)"
+            }
+
+            if (currentScrollTop >= 100) {
                 headerElm.style.position = "fixed"
                 headerElm.style.width = "100%"
-            } else{
+            } else {
                 headerElm.style.position = "relative"
-                headerElm.style.transform = "translateY(-0%)"
             }
-        })
+
+            lastScrollTop = currentScrollTop
+        }
+
+        mainElm.addEventListener("scroll", handleScroll)
+        
+        return () => {
+            mainElm.removeEventListener("scroll", handleScroll)
+        }
         
     }, []);
 
@@ -123,19 +140,21 @@ const Header: React.FC = () => {
                                 Services
                             </a>
                             <a
-                                href="#contact"
+                                href="#store"
                                 className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
+                            >
+                                Store
+                            </a>
+                            <a
+                            
+                                href="#contact"
+                                className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Contact
                             </a>
                             <a
-                                href="#products"
-                                className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
-                            >
-                                Our Products
-                            </a>
-                            <a
                                 href="#book"
+                                
                                 className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform-style-3d hover:translateZ(20px)"
                             >
                                 Book Repair

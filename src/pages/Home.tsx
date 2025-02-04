@@ -200,7 +200,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="welcome-section bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl md:rounded-2xl shadow-xl p-3 md:p-8 text-white">
+      <section         id="services" className="welcome-section bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl md:rounded-2xl shadow-xl p-3 md:p-8 text-white">
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 md:mb-4">
           📱 Welcome to Mobile Fix Masters ✨
         </h1>
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
       </section>
 
       <section
-        id="services"
+
         ref={servicesRef}
         className="bg-white rounded-xl md:rounded-2xl shadow-xl p-3 md:p-8"
       >
@@ -314,7 +314,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Store Section */}
-      <section className="bg-gray-100 rounded-xl md:rounded-2xl shadow-xl p-3 md:p-8 text-gray-800">
+      <section id="store" className="bg-gray-100 rounded-xl md:rounded-2xl shadow-xl p-3 md:p-8 text-gray-800">
         <h2 className="text-xl md:text-3xl font-bold mb-3 md:mb-6 flex items-center gap-2">
           <span className="text-2xl md:text-3xl">🛍️</span> Our Store
         </h2>
@@ -368,23 +368,24 @@ const Home: React.FC = () => {
             <p className="text-xs md:text-sm text-gray-600">₹1,999</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-3 md:p-4 hover:scale-105 transition-all shadow-lg">
-            <img src="https://images.unsplash.com/photo-1615834307821-5a4c7c5ac0a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Car Holder" className="w-full h-32 md:h-40 object-cover rounded-xl mb-2 md:mb-3" />
-            <h3 className="font-bold text-sm md:text-lg text-gray-800">Car Phone Holder</h3>
-            <p className="text-xs md:text-sm text-gray-600">₹499</p>
-          </div>
 
           <div className="bg-white rounded-2xl p-3 md:p-4 hover:scale-105 transition-all shadow-lg">
             <img src="https://m.media-amazon.com/images/I/71K6mroOBJL._SL1500_.jpg" alt="Bluetooth Speaker" className="w-full h-32 md:h-40 object-cover rounded-xl mb-2 md:mb-3" />
             <h3 className="font-bold text-sm md:text-lg text-gray-800">Bluetooth Speaker</h3>
             <p className="text-xs md:text-sm text-gray-600">₹999</p>
           </div>
+          
+          <div className="bg-white rounded-2xl p-3 md:p-4 hover:scale-105 transition-all shadow-lg">
+            <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Smart Watch" className="w-full h-32 md:h-40 object-cover rounded-xl mb-2 md:mb-3" />
+            <h3 className="font-bold text-sm md:text-lg text-gray-800">Smart Watch</h3>
+            <p className="text-xs md:text-sm text-gray-600">₹2,499</p>
+          </div>
 
           {/* View More Button */}
-          <div className="col-span-full text-center mt-4 md:mt-6">
+          <div  className="col-span-full text-center mt-4 md:mt-6">
             <button className="bg-white hover:bg-gray-50 px-6 md:px-8 py-2 md:py-3 rounded-full font-bold transition-all text-gray-800 shadow-lg flex items-center gap-2 mx-auto text-sm md:text-base">
               <span>View All Products</span>
-              <span className="text-lg md:text-xl">🛍️</span>
+              <span  className="text-lg md:text-xl">🛍️</span>
             </button>
           </div>
         </div>
