@@ -9,14 +9,12 @@ const Header: React.FC = () => {
 
         let lastScrollTop = 0
 
-        const handleScroll = (e: Event) => {
+        const handleScroll = () => {
             const currentScrollTop = mainElm.scrollTop
             
             if (currentScrollTop > lastScrollTop) {
-                // Scrolling down
                 headerElm.style.transform = "translateY(-100%)"
             } else {
-                // Scrolling up
                 headerElm.style.transform = "translateY(0)"
             }
 
@@ -195,31 +193,37 @@ const Header: React.FC = () => {
                     >
                         <div className="flex flex-col space-y-4">
                             <a
-                                href="/"
+                                href="#home"
                                 className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Home
                             </a>
                             <a
-                                href="/services"
-                                className="text-gray-700 hover:text-purple-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
-                            >
-                                Services
-                            </a>
-                            <a
-                                href="/contact"
-                                className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
-                            >
-                                Contact
-                            </a>
-                            <a
-                                href="/about"
+                                href="#about"
                                 className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 About Us
                             </a>
                             <a
-                                href="/book"
+                                href="#services"
+                                className="text-gray-700 hover:text-purple-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
+                            >
+                                Services
+                            </a>
+                            <a
+                                href="#store"
+                                className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
+                            >
+                                Store
+                            </a>
+                            <a
+                                href="#contact"
+                                className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
+                            >
+                                Contact
+                            </a>
+                            <a
+                                href="#book"
                                 className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full text-center hover:shadow-lg transition-all duration-300 transform-style-3d hover:translateZ(20px)"
                             >
                                 Book Repair
