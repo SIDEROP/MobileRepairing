@@ -193,36 +193,42 @@ const Header: React.FC = () => {
                     >
                         <div className="flex flex-col space-y-4">
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#home"
                                 className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Home
                             </a>
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#about"
                                 className="text-gray-700 hover:text-pink-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 About Us
                             </a>
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#services"
                                 className="text-gray-700 hover:text-purple-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Services
                             </a>
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#store"
                                 className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Store
                             </a>
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#contact"
                                 className="text-gray-700 hover:text-indigo-500 transition-colors transform-style-3d hover:translateZ(10px) transition-transform duration-300"
                             >
                                 Contact
                             </a>
                             <a
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 href="#book"
                                 className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full text-center hover:shadow-lg transition-all duration-300 transform-style-3d hover:translateZ(20px)"
                             >

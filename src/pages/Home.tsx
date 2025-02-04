@@ -96,7 +96,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* why choose us */}
-      <section className="bg-gradient-to-br from-purple-100 via-white to-pink-100 rounded-xl md:rounded-2xl shadow-xl p-4 md:p-8">
+      <section id="about" className="bg-gradient-to-br from-purple-100 via-white to-pink-100 rounded-xl md:rounded-2xl shadow-xl p-4 md:p-8">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center mb-6 md:mb-8">
             <div className="w-24 h-24 md:w-36 md:h-36 rounded-full overflow-hidden mb-3 md:mb-4 ring-4 md:ring-8 ring-purple-500/30 shadow-2xl hover:scale-110 transition-all duration-500 hover:rotate-3">
